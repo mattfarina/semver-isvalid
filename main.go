@@ -85,6 +85,9 @@ The codes include:
 For more information on Semantic Versions please visit the specification
 at https://semver.org.
 
+You can learn more about this application at
+https://github.com/mattfarina/semver-isvalid
+
 `
 
 func validate(ver string) {
