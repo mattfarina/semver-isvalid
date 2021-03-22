@@ -16,7 +16,7 @@ The use is pretty simple. You pass in a single version as an argument and it wil
 
 For example, you can run it like so:
 
-```sh
+```console
 $ semver-isvalid 1.2.3
 Found major version of 1
 Found minor version of 2
@@ -26,11 +26,25 @@ Semantic Version is valid
 
 An example with an invalid version would be:
 
-```sh
+```console
 $ semver-isvalid 1.2.03
 Illegal leading 0 found in "patch" part
 Invalid Semantic Version: Version segment starts with 0. For more information see https://semver.org
 ```
+
+The "v" at the start of a version is NOT part of Semantic Versioning. If you
+want to allow that as part of the version you can use the --with-v flag. For
+example:
+
+```console
+$ semver-isvalid v1.2.3 --with-v
+Found major version of 1
+Found minor version of 2
+Found patch version of 3
+Semantic Version is valid
+```
+
+Without the --with-v this would have returned an error as being invalid.
 
 For those who look at exit codes, each type of error has a unique exit code.
 The codes include:
