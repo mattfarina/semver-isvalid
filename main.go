@@ -16,6 +16,11 @@ func main() {
 		Short: "semver-isvalid allows you to validate a single semantic version",
 		Long:  longdesc,
 		Run: func(cmd *cobra.Command, args []string) {
+
+			if disableColor {
+				color.NoColor = true
+			}
+
 			la := len(args)
 			if la == 0 {
 				_ = cmd.Help()
@@ -29,6 +34,7 @@ func main() {
 	}
 
 	cmd.PersistentFlags().BoolVar(&withV, "with-v", false, "allow v at start of version")
+	cmd.PersistentFlags().BoolVar(&disableColor, "disable-color", false, "disable use of color in output")
 
 	cmd.Execute()
 }
@@ -36,6 +42,7 @@ func main() {
 var red = color.New(color.FgRed)
 
 var withV = false
+var disableColor = false
 
 const longdesc = `semver-isvalid allows you to validate a single semantic version
 
