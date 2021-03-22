@@ -71,4 +71,12 @@ func main() {
 
 ## Inspiration
 
+It is not uncommon for people or tooling to inadvertently create semantic versions that are invalid. This can lead to consequences when working with tools that depend on valid semantic versions.
+
+[SUSE](https://www.suse.com/) Hackweek opened up an opportunity to hack on a tool to check for validity.
+
+Having written a [semver parsing library](https://github.com/masterminds/semver) (and spending way to much time reading the spec) this seemed like an easy and possibly useful tool to write.
+
 ## License
+
+This licensed under the MIT license just as [the inspiration codebase](https://github.com/masterminds/semver) is.
