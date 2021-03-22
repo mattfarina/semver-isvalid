@@ -2,6 +2,8 @@
 
 This tiny application and go library enable you to test if a semantic version is valid or not.
 
+Note: Semantic Versioning (SemVer) is a specification. You can find the specification [here](https://semver.org/).
+
 ## Usage
 
 There are two ways to use this codebase. 1) as an application you can install and run and 2) as a Go library you can use in your own application.
